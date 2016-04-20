@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 app = Flask(__name__)
 
@@ -34,6 +36,11 @@ def FindWords(letters='', words=Main()):
 
 Main()
 
-app.debug = True
-if __name__ == '__main__':
-	app.run()
+if os.environ.get('MODE', 'development') == 'production':
+	print('Running in production mode...')
+	app.run(host=('0.0.0.0'))
+else:
+	print('Running in development mode...')
+	app.debug = True
+	if __name__ == '__main__':
+		app.run()
