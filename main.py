@@ -3,9 +3,7 @@ def Main():
 
 	f = open('slowa.txt', 'r')
 	words = f.readlines()
-	f.close()
-	#words = ['kupa', 'dupa']	
-	#print(words[1:25])
+	f.close()	
 	print('Database contains ' + str(len(words)) + ' words.')
 	letters = raw_input('Gimme letterz: ')
 	letters = list(letters)
