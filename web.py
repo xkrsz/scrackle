@@ -12,7 +12,7 @@ def Main():
 	print('Database contains ' + str(len(words)) + ' words.')
 	return words
 
-@app.route('/<letters>')
+@app.route('/find/<letters>')
 def FindWords(letters='', words=Main()):
 	print('Got letters: ' + letters)
 	letters = list(letters)
