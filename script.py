@@ -31,7 +31,7 @@ def Main():
 				bar.update(i)
 
 	print('I found ' + str(len(available_words)) + ' words you can build: ')
+	available_words.sort(key=len, reverse=True)
 	for i, word in enumerate(available_words):
 		print(str(i + 1) + '. ' + word)
-
 Main()
