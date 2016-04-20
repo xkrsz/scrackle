@@ -32,7 +32,8 @@ def FindWords(letters='', words=Main()):
 					word_test = word_test.replace(letter, '')
 			if count == l:
 				available_words.append(word)
-	return str(available_words.sort(key=len, reverse=True))
+	available_words.sort(key=len, reverse=True)
+	return str(available_words)
 
 Main()
 
